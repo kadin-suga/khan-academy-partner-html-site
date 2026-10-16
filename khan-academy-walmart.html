@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Khan Academy &amp; Walmart — A financial literacy partnership</title>
+  <meta name="description" content="Khan Academy and Walmart’s financial literacy partnership: the deal, each side’s contribution, their public statements, and a personal assessment.">
+  <style>
+    :root {
+      --paper: #FAF9F5;
+      --body: #3D3D3A;
+      --ink: #1A1A18;
+      --muted: #6E6E68;
+      --green: #6B9B7A;
+      --sage: #C9D9BC;
+      --forest: #2F5C42;
+      --gold: #D9A94C;
+      --gold-ink: #8A6A20;
+      --rule: #D5D3CC;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--body);
+      font-family: var(--sans);
+      font-size: 18px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--sage); color: var(--ink); }
+    main {
+      width: min(100% - 112px, 1160px);
+      margin-inline: auto;
+    }
+    section { min-width: 0; }
+    h1, h2, h3, p, blockquote, figure { margin: 0; }
+    h1, h2, h3 { color: var(--ink); font-weight: 400; }
+    h1, h2, h3, p { overflow-wrap: break-word; }
+    p { max-width: 65ch; }
+    .eyebrow {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+    .section-label { margin-bottom: 26px; }
+    .section-heading {
+      max-width: 900px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.1vw, 50px);
+      letter-spacing: -.035em;
+      line-height: 1.14;
+      text-wrap: balance;
+    }
+
+    /* The deal */
+    .deal { padding-block: 46px 76px; }
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .partnership {
+      margin-top: 51px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: .025em;
+    }
+    .partnership span { padding-inline: 9px; color: var(--forest); }
+    h1 {
+      margin-top: 25px;
+      font-family: var(--serif);
+      font-size: clamp(49px, 8.9vw, 124px);
+      letter-spacing: -.055em;
+      line-height: 1.04;
+    }
+    h1 .headline-line { display: block; }
+    h1 em {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 16px;
+      font-weight: 400;
+      isolation: isolate;
+    }
+    .headline-stroke {
+      position: absolute;
+      z-index: -1;
+      left: 1%;
+      bottom: 4px;
+      width: 99%;
+      height: 17px;
+      overflow: visible;
+      color: var(--green);
+    }
+    .intro {
+      margin-top: 39px;
+      max-width: 62ch;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+    .intro strong { color: var(--ink); font-weight: 500; }
+
+    /* Contributions and public statements */
+    .exchange { border-top: 1px solid var(--rule); padding-block: 58px 74px; }
+    .exchange-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 70px;
+      margin-top: 49px;
+    }
+    .organisation { min-width: 0; }
+    .organisation + .organisation {
+      position: relative;
+    }
+    .organisation + .organisation::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 4px;
+      bottom: 0;
+      width: 1px;
+      background: var(--rule);
+    }
+    .organisation h3 {
+      margin-bottom: 24px;
+      font-family: var(--serif);
+      font-size: 31px;
+      letter-spacing: -.025em;
+      line-height: 1.2;
+    }
+    .organisation .eyebrow { margin-bottom: 12px; }
+    .contribution { min-height: 245px; }
+    .contribution p + p { margin-top: 14px; }
+    .terms {
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .terms strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .public-statement { margin-top: 32px; }
+    .public-statement > .eyebrow { color: var(--forest); }
+    .quote-body {
+      position: relative;
+      padding: 10px 0 0 28px;
+    }
+    .quote-rule {
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 7px;
+      height: calc(100% - 9px);
+      color: var(--forest);
+    }
+    .quote-mark {
+      display: block;
+      height: 37px;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 65px;
+      line-height: 1;
+    }
+    blockquote p {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 25px;
+      letter-spacing: -.015em;
+      line-height: 1.43;
+    }
+    figcaption {
+      max-width: 43ch;
+      margin-top: 24px;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .speaker {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .role { color: var(--muted); }
+
+    /* A closed, dashed note distinguishes personal inference from a quotation. */
+    .rough-panel { position: relative; isolation: isolate; }
+    .rough-outline {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+    .inference {
+      display: grid;
+      grid-template-columns: minmax(0, .75fr) minmax(0, 1.65fr);
+      gap: 32px 48px;
+      margin-top: 64px;
+      padding: 39px 42px 42px;
+    }
+    .inference .eyebrow { color: var(--forest); }
+    .inference h3 {
+      margin-top: 13px;
+      font-family: var(--serif);
+      font-size: 27px;
+      letter-spacing: -.025em;
+      line-height: 1.25;
+    }
+    .inference-disclosure {
+      margin-top: 16px;
+      color: var(--forest);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .inference-copy { font-size: 17px; line-height: 1.75; }
+    .inference-copy p + p { margin-top: 16px; }
+
+    /* Deal type */
+    .deal-type { border-top: 1px solid var(--rule); padding-block: 54px 62px; }
+    .sponsorship {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 24px 55px;
+      padding: 40px 43px 43px;
+    }
+    .sponsorship h2 {
+      font-family: var(--serif);
+      font-size: clamp(37px, 5.1vw, 65px);
+      letter-spacing: -.045em;
+      line-height: 1.15;
+    }
+    .sponsorship p { max-width: 35ch; color: var(--ink); font-size: 17px; line-height: 1.65; }
+
+    /* Personal assessment */
+    .my-call { border-top: 1px solid var(--rule); padding-block: 58px 94px; }
+    .my-call .section-label { display: flex; align-items: center; gap: 10px; }
+    .gold-dot { flex: 0 0 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .call-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: 32px 72px;
+      align-items: start;
+    }
+    .call-copy { padding-top: 3px; }
+    .call-copy p + p { margin-top: 19px; }
+
+    @media (min-width: 1500px) {
+      .deal { padding-top: 59px; }
+    }
+    @media (max-width: 1000px) {
+      main { width: calc(100% - 80px); }
+      .exchange-grid { gap: 48px; }
+      .organisation + .organisation::before { left: -25px; }
+      .contribution { min-height: 285px; }
+      .inference { grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr); gap: 30px; padding: 33px; }
+      .sponsorship { gap: 24px 32px; padding: 35px; }
+      .call-grid { gap: 32px 45px; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      main { width: calc(100% - 48px); }
+      .deal { padding-block: 27px 47px; }
+      .dateline { padding-bottom: 16px; }
+      .eyebrow { font-size: 10px; letter-spacing: .135em; }
+      .partnership { margin-top: 34px; font-size: 13px; }
+      .partnership span { padding-inline: 5px; }
+      h1 { margin-top: 22px; font-size: clamp(51px, 11.4vw, 80px); line-height: 1.08; letter-spacing: -.055em; }
+      h1 em { padding-bottom: 13px; }
+      .headline-stroke { height: 11px; bottom: 3px; }
+      .intro { margin-top: 25px; font-size: 18px; }
+      .section-label { margin-bottom: 21px; }
+      .section-heading { font-size: clamp(33px, 6.2vw, 42px); }
+      .exchange { padding-block: 39px 48px; }
+      .exchange-grid { grid-template-columns: minmax(0, 1fr); gap: 39px; margin-top: 34px; }
+      .organisation h3 { margin-bottom: 23px; font-size: 29px; }
+      .organisation + .organisation { padding-top: 35px; border-top: 1px solid var(--rule); }
+      .organisation + .organisation::before { content: none; }
+      .contribution { min-height: 0; }
+      .public-statement { margin-top: 28px; }
+      blockquote p { font-size: 24px; }
+      .terms { max-width: 55ch; }
+      .inference { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 42px; padding: 28px; }
+      .inference h3 { max-width: 22ch; margin-top: 10px; font-size: 27px; }
+      .inference-disclosure { margin-top: 11px; }
+      .inference-copy { font-size: 16px; }
+      .deal-type { padding-block: 38px 44px; }
+      .sponsorship { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 29px; }
+      .sponsorship h2 { font-size: clamp(34px, 7vw, 47px); }
+      .sponsorship p { max-width: 45ch; font-size: 16px; }
+      .my-call { padding-block: 39px 61px; }
+      .call-grid { grid-template-columns: minmax(0, 1fr); gap: 27px; }
+      .call-copy { padding-top: 0; }
+    }
+    @media (max-width: 360px) {
+      main { width: calc(100% - 36px); }
+      h1 { font-size: 13.9vw; }
+      .inference { padding: 25px; }
+      .sponsorship { padding: 26px; }
+      .sponsorship h2 { font-size: clamp(24px, 10.2vw, 34px); }
+    }
+    @media print {
+      main { width: 100%; }
+      body { font-size: 11pt; }
+      .deal { padding-top: 0; }
+      h1 { font-size: 57pt; }
+      .exchange-grid { gap: 36px; }
+      .contribution { min-height: 0; }
+      .inference, .sponsorship, figure { break-inside: avoid; }
+      .rough-outline { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="deal" aria-labelledby="deal-heading">
+      <div class="dateline eyebrow">
+        <p>The deal</p>
+        <time datetime="2023-07-18">July 18, 2023</time>
+      </div>
+      <p class="partnership">Khan Academy <span aria-label="and">×</span> Walmart</p>
+      <h1 id="deal-heading">
+        <span class="headline-line">Financial literacy,</span>
+        <em>free to learn.
+          <svg class="headline-stroke" viewBox="0 0 700 20" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M3 12 Q160 3 348 9 T697 7" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" />
+          </svg>
+        </em>
+      </h1>
+      <p class="intro">On July 18, 2023, <strong>Khan Academy and Walmart announced a partnership</strong> in which Walmart became the founding sponsor of Khan Academy’s free financial literacy course for Walmart associates, customers, and the wider community.</p>
+    </section>
+
+    <section class="exchange" aria-labelledby="exchange-heading">
+      <p class="eyebrow section-label">What each side gave &amp; why each side said yes</p>
+      <h2 class="section-heading" id="exchange-heading">The contributions.<br>The reasons on record.</h2>
+
+      <div class="exchange-grid">
+        <article class="organisation" aria-labelledby="khan-heading">
+          <h3 id="khan-heading">Khan Academy</h3>
+          <div class="contribution">
+            <p class="eyebrow">What it gave</p>
+            <p>Created a new financial literacy course, with video lessons, articles, and exercises.</p>
+            <p>Made the course available for free to learners, including Walmart associates and customers.</p>
+          </div>
+          <figure class="public-statement">
+            <p class="eyebrow">On the record · Public statement</p>
+            <div class="quote-body">
+              <svg class="quote-rule" viewBox="0 0 8 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <path d="M4 1 Q2 78 4 149 T3 299" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke" />
+              </svg>
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <blockquote><p>Without their support, we would not be able to produce lessons about financial literacy and keep them free.</p></blockquote>
+              <figcaption><span class="speaker">Sal Khan</span><span class="role">Founder and CEO, Khan Academy</span></figcaption>
+            </div>
+          </figure>
+        </article>
+
+        <article class="organisation" aria-labelledby="walmart-heading">
+          <h3 id="walmart-heading">Walmart</h3>
+          <div class="contribution">
+            <p class="eyebrow">What it gave</p>
+            <p>Provided “generous support” as Khan Academy’s “founding sponsor”.</p>
+            <p class="terms"><strong>Financial terms not stated.</strong>The sponsorship amount and specific financial terms were not stated in either announcement.</p>
+          </div>
+          <figure class="public-statement">
+            <p class="eyebrow">On the record · Public statement</p>
+            <div class="quote-body">
+              <svg class="quote-rule" viewBox="0 0 8 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <path d="M4 1 Q5 78 3 149 T4 299" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke" />
+              </svg>
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <blockquote><p>We believe offering these unique financial offerings will empower people to live their best lives – in and out of the workplace.</p></blockquote>
+              <figcaption><span class="speaker">Kim Lupo</span><span class="role">Senior Vice President, Global Total Rewards, Walmart</span></figcaption>
+            </div>
+          </figure>
+        </article>
+      </div>
+
+      <aside class="inference rough-panel" aria-labelledby="inference-heading">
+        <svg class="rough-outline" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M4 5 Q250 1 500 4 T995 5 L997 153 994 296 Q740 299 500 296 T4 297 L2 150 Z" fill="var(--sage)" stroke="var(--forest)" stroke-width="1" stroke-dasharray="5 5" vector-effect="non-scaling-stroke" />
+        </svg>
+        <div>
+          <p class="eyebrow">My inference</p>
+          <h3 id="inference-heading">Why Khan Academy said yes.</h3>
+          <p class="inference-disclosure">My own interpretation.<br>Not a public statement by either organisation.</p>
+        </div>
+        <div class="inference-copy">
+          <p>My read is that the sponsorship allowed Khan Academy to grow professionally and gain industry reputation.</p>
+          <p>It also allowed Khan Academy to extend its intellectual property with another company paying for it. In my view, that made the sponsorship particularly beneficial to Khan Academy.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="deal-type" aria-labelledby="type-heading">
+      <p class="eyebrow section-label">What kind of deal it is</p>
+      <div class="sponsorship rough-panel">
+        <svg class="rough-outline" viewBox="0 0 1000 250" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M4 4 Q260 1 500 4 T996 3 L998 124 995 246 Q760 249 501 246 T4 247 L2 125 Z" fill="var(--green)" stroke="var(--forest)" stroke-width="1" vector-effect="non-scaling-stroke" />
+        </svg>
+        <h2 id="type-heading">Sponsorship.</h2>
+        <p>Walmart is the founding sponsor of Khan Academy’s free financial literacy course.</p>
+      </div>
+    </section>
+
+    <section class="my-call" aria-labelledby="call-heading">
+      <p class="eyebrow section-label"><span class="gold-dot" aria-hidden="true"></span>My call</p>
+      <div class="call-grid">
+        <h2 class="section-heading" id="call-heading">Brand credibility.<br>A wider reach.</h2>
+        <div class="call-copy">
+          <p>The strongest thing about this deal is Khan Academy’s brand credibility.</p>
+          <p>By associating with a globally known brand, Khan Academy can reach people who may not yet know it, giving a new audience access to its other videos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
